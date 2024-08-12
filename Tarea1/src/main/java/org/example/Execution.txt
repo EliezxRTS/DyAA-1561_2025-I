@@ -1,0 +1,43 @@
+Instrucciones para la ejecución del programa
+
+    El nodo cabecera 'head' se encuentra inicializado desde la creación del objeto grafo
+    por lo que el grafo no es nulo.
+
+->Inserción:
+
+    Para la inserción de un nuevo nodo se debe utilizar el método insertNode(Node parent, int value, String position)
+    el cual va siempre a solicitar un nodo de referencia, un valor y una posición siendo estas
+    'upper', 'center' y 'lower', representando las posibles conexiones del nodo.
+
+    Un ejemplo de esto es la sentencia:     graph.insertNode(head, 23, "upper");
+
+    Aquí se agrega al nodo cabecera un nuevo nodo cuyo valor es 23 a su conexión superior.
+
+-->Impresión/Visualización:
+
+    Para poder visualizar la ruta que se sigue desde el nodo cabecera hasta cualquier otro
+    nodo, se debe seguir una ruta específica, misma que es conocida desde la inserción.
+    Esta acción se realiza mediante el método printPathFromHead(List<String> path) que solicita
+    una lista de tipo string y recibe únicamente "upper", "center" y "lower" como entradas
+    válidas para la ruta al nodo solicitado.
+
+    Un ejemplo de esto son las sentencias:     List<String> pathTo99 = List.of("center", "lower", "center");
+                                               graph.printPathFromHead(pathTo99);
+
+    Aquí se crea un lista con la ruta que parte desde el nodo cabecera al nodo 99.
+    Como el nodo cabecera es único y no depende de alguien más, no se utiliza ninguna referencia a su
+    posición y se procede a partir de este con la dirección al nodo del nivel siguiente, luego sigue la
+    posición de referencia desde el nodo de nivel 1 al nodo siguiente y así sucesivamente.
+
+--->Ejecución:
+
+    Al no tener restricción alguno o necesidad específica de que los datos sean solicitados al usuario,
+    se agrega la creación del grafo, la posterior inserción de los nodos y su final impresión para
+    visualización directamente al main del proyecto.
+
+    ***Únicamente se debe correr el archivo Main.java que mostrará la implementación y los resultados del proyecto.
+
+---->Notas:
+
+    ***El proyecto se creo utilizando lenguaje de programación Java, utilizando gradle y con JDK 19.0.2.
+    ***Se recomienda su ejecución en la herramienta Intelli J IDEA CE.
